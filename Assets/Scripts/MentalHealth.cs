@@ -11,7 +11,7 @@ public class MentalHealth : MonoBehaviour
     [SerializeField] private float _reduceHealthValue;
     public float Health;
 
-    private bool _canReduce = true;
+    [HideInInspector] public bool CanReduce = false;
     private bool _onceDisplayCode;
 
     private void Start()
@@ -46,7 +46,7 @@ public class MentalHealth : MonoBehaviour
 
     private void ReduceHealth()
     {
-        if(_canReduce == true)
+        if(CanReduce == true)
         {
             Health -= _reduceHealthValue * Time.deltaTime;
             DisplayHealth();

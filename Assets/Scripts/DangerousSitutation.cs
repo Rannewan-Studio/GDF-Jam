@@ -33,19 +33,9 @@ public class DangerousSitutation : MonoBehaviour
         {
             ChangeVignette(_vignetteColor[1], 0.260f);
             ChangeChromaticAberration(0.5f, true);
+            AudioPlayer.Instance.PlayAudio(2);
         }
-        else if(_playerMentalHealth.Health <= 30)
-        {
-            ChangeVignette(_vignetteColor[2], 0.250f);
-            ChangeChromaticAberration(0.4f, true);
-        }
-        else if(_playerMentalHealth.Health <= 40f)
-        {
-            _isDangerousSituation = true;
-            ChangeVignette(_vignetteColor[3], 0.240f);
-            ChangeChromaticAberration(0.2f, true);
-        }
-        else if(_playerMentalHealth.Health <= 50f)
+        else if(_playerMentalHealth.Health <= 30f)
         {
             _isDangerousSituation = true;
             ChangeVignette(Color.black, 0.230f);

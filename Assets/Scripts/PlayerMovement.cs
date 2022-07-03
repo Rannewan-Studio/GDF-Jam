@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 moveDirection = transform.right * xDirection + transform.forward * zDirection;
         _controller.Move(moveDirection * _moveSpeed * Time.deltaTime);
+
+        if(xDirection != 0 || zDirection != 0)
+        {
+            AudioPlayer.Instance.PlayAudio(3);
+        }
     }
 
     public void Jump()
