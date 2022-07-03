@@ -22,6 +22,7 @@ public class MentalHealth : MonoBehaviour
     private void Update()
     {
         ReduceHealth();
+        DeepBreath();
 
         if(Health <= 0)
         {
