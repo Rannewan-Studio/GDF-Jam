@@ -29,7 +29,7 @@ public class CodeEntry : MonoBehaviour
         }
     }
 
-    private void Close()
+    public void Close()
     {
         _codeEntryPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;

@@ -2,17 +2,17 @@
 
 public class AudioObject : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] _clips;
+    public AudioClip[] _clips;
     private AudioSource _audioSource;
 
-    private void Start()
+    private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
     }
 
     public void PlayAudio(int number)
     {
-        _audioSource.clip = _clips[number];
+        _audioSource.clip = _clips[1];
         _audioSource.Play();
     }
 

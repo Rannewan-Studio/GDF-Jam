@@ -7,6 +7,12 @@ public class Navigator : MonoBehaviour
 
     [SerializeField] private Text _navigateText;
 
+    private void Start()
+    {
+        if(Instance == null)
+            Instance = this;
+    }
+
     public void SetNavigateText(string text)
     {
         _navigateText.text = text;

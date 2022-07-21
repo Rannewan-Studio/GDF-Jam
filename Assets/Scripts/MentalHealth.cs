@@ -11,7 +11,7 @@ public class MentalHealth : MonoBehaviour
     [SerializeField] private float _reduceHealthValue;
     public float Health;
 
-    [HideInInspector] public bool CanReduce = false;
+    public bool CanReduce = false;
     private bool _onceDisplayCode;
 
     private void Start()
@@ -55,10 +55,10 @@ public class MentalHealth : MonoBehaviour
 
     public void CalmDown()
     {
-        Health = _maxHealth;
         if(_onceDisplayCode == false)
         {
             _onceDisplayCode = true;
+            Health = _maxHealth;
             StartCoroutine(FindObjectOfType<ElevatorCode>().DisplayCode());
         }
     }
@@ -68,6 +68,7 @@ public class MentalHealth : MonoBehaviour
         if(Input.GetKey(KeyCode.F))
         {
             CalmDown();
+            Navigator.Instance.SetNavigateText("Хорошо, я успокоился... Теперь чтобы запустить лифт надо ввести код, сейчас его части будут появляться у тебя на экране");
         }
     }
 }

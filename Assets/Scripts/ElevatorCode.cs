@@ -43,6 +43,7 @@ public class ElevatorCode : MonoBehaviour
         yield return new WaitForSeconds(_displayCoolDown);
         Flash();
         ShowCode(_code[3]);
+        Navigator.Instance.SetNavigateText("Так я запомнил код, теперь нужно ввести код нажимая на кнопки этажей (Если ты не запомнил код то нажми R чтобы начать заново)");
     }
 
     private void Flash()

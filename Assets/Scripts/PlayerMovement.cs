@@ -35,7 +35,15 @@ public class PlayerMovement : MonoBehaviour
 
         if(xDirection != 0 || zDirection != 0)
         {
-            AudioPlayer.Instance.PlayAudio(3);
+            float cooldown = 0.25f;
+            if(cooldown <= 0)
+            {
+                AudioPlayer.Instance.PlayAudio(3);
+            }
+            else
+            {
+                cooldown -= Time.deltaTime;
+            }
         }
     }
 

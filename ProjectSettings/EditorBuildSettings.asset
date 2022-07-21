@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Art/Scenes/ElevatorScene.unity
+    guid: 271b361daf162e3469487890a35c8a27
+  - enabled: 1
+    path: Assets/Scenes/Labyrinth.unity
+    guid: 1247f5715e6b2dd4cba2b3293150220f
   m_configObjects: {}
